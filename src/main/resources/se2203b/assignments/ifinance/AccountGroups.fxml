@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se2203b.assignments.ifinance.AccountGroupsController">
+   <children>
+      <TreeView fx:id="treeView" layoutX="44.0" layoutY="71.0" onMouseClicked="#check_menu" prefHeight="308.0" prefWidth="301.0">
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem fx:id="add_group" mnemonicParsing="false" onAction="#add_clicked" text="Add New Group" />
+                  <MenuItem fx:id="change_group" mnemonicParsing="false" onAction="#change_clicked" text="Change Group Name" />
+                  <MenuItem fx:id="delete_group" mnemonicParsing="false" onAction="#delete_clicked" text="Delete Group" />
+               </items>
+            </ContextMenu>
+         </contextMenu></TreeView>
+      <Label layoutX="175.0" layoutY="44.0" text="Custom Accounts Group Forum">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TitledPane animated="false" layoutX="366.0" layoutY="71.0" text="Add or Change Group Name">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="26.0" text="Group Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="text_input" layoutX="30.0" layoutY="62.0" />
+                  <Button fx:id="save_btn" layoutX="127.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#save" text="Save" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button layoutX="366.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="25.0" prefWidth="202.0" text="Exit" />
+   </children>
+</AnchorPane>
